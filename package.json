@@ -1,0 +1,24 @@
+{
+  "name": "inquirer-perryellis",
+  "version": "1.0.0",
+  "description": "inquirer-perryellis",
+  "main": "Index.js",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "inquirer": "^3.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OTCCIS131/inquirer-perryellis.git"
+  },
+  "author": "Perry Ellis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OTCCIS131/inquirer-perryellis/issues"
+  },
+  "homepage": "https://github.com/OTCCIS131/inquirer-perryellis#readme"
+}
