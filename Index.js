@@ -2,21 +2,24 @@ const inquirer = require("Inquirer")
 const chalk = require("Chalk")
 const confirm = require('inquirer-confirm');
 
-
-
-
 console.log('Welcome to Mightys Pizza')
 
 let question = [{
         name: 'size',
-        message: 'What size of pizza do you want?',   
+        type: 'list',
+        choices: ['Small', 'Medium', 'Large'], 
+        message: "What size would you like?", 
     },
     {
         name: 'toppings',
-        message: "What toppings would you like?",  
+        type: 'checkbox',
+        choices: ['Cheese', 'Sausge', 'Peppers', 'Pineapple', 'Pepperoni'],
+        message: "Select toppings ",  
     },
     {
         name: 'cut',
+        type: 'list',
+        choices: ['Square', 'Triangle'],
         message: 'How would you like your pizza cut?',
     },  
 ]
@@ -29,9 +32,9 @@ inquirer.prompt(question).then(function ({size, toppings, cut}){
     .then(function confirmed(){
         console.log('Great your order is being processed');
     }, function cancelled(){
-        inquirer.prompt(question);
+        inquirer.prompt(question).then(confirm);
         })
-        
+
 });
 
 
